@@ -6,3 +6,7 @@ A starting point for some [GOSPEL](https://www.getrevue.co/profile/lzrs/issues/i
 2. CD
 3. Conventional commits
 4. Convert into template or polish to be a usable starter kit
+
+## Troubleshooting
+1. `cd cdk`
+2. `npm run build && cdk deploy -O ../web/cdk-exports.json`
