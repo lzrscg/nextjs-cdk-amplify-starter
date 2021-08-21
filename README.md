@@ -8,6 +8,6 @@ A starting point for some [GOSPEL](https://www.getrevue.co/profile/lzrs/issues/i
 4. Convert into template or polish to be a usable starter kit
 
 ## Troubleshooting
-If no cdk exports file is found:
+If no cdk exports file is found (warning, this deploys):
 1. `cd cdk`
 2. `npm run build && cdk deploy -O ../web/cdk-exports.json`
