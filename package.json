@@ -1,0 +1,28 @@
+{
+  "name": "nextjs-cdk-amplify-starter",
+  "version": "1.0.0",
+  "description": "A starting point for some [GOSPEL](https://www.getrevue.co/profile/lzrs/issues/introducing-gospel-global-open-source-permissionless-enterprise-league-676392)-related apps. Technologies: TypeScript, Next.js 11, Tailwind CSS, Eslint, Prettier, CDK, Amplify. The CDK is adapted from [this repo](https://github.com/dabit3/next.js-cdk-amplify-workshop).",
+  "bin": "application.js",
+  "scripts": {
+    "web": "cd web && npm run dev",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzrscg/nextjs-cdk-amplify-starter.git"
+  },
+  "author": "LZRS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lzrscg/nextjs-cdk-amplify-starter/issues"
+  },
+  "homepage": "https://github.com/lzrscg/nextjs-cdk-amplify-starter#readme",
+  "workspaces": [
+    "web",
+    "backend"
+  ],
+  "dependencies": {
+    "@aws-cdk/core": "^1.120.0",
+    "source-map-support": "^0.5.19"
+  }
+}

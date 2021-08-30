@@ -3,6 +3,7 @@ import * as cognito from '@aws-cdk/aws-cognito'
 import * as appsync from '@aws-cdk/aws-appsync'
 import * as ddb from '@aws-cdk/aws-dynamodb'
 import * as lambda from '@aws-cdk/aws-lambda'
+import path = require('path/posix')
 
 export class BackendStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -34,7 +35,8 @@ export class BackendStack extends cdk.Stack {
       logConfig: {
         fieldLogLevel: appsync.FieldLogLevel.ALL,
       },
-      schema: appsync.Schema.fromAsset('./graphql/schema.graphql'),
+      // TODO: figure out how to import from relative path
+      schema: appsync.Schema.fromAsset('backend/graphql/schema.graphql'),
       authorizationConfig: {
         defaultAuthorization: {
           authorizationType: appsync.AuthorizationType.API_KEY,
@@ -54,7 +56,8 @@ export class BackendStack extends cdk.Stack {
     const postLambda = new lambda.Function(this, 'AppSyncPostHandler', {
       runtime: lambda.Runtime.NODEJS_12_X,
       handler: 'main.handler',
-      code: lambda.Code.fromAsset('lambda-fns'),
+      // TODO: figure out how to import from relative path
+      code: lambda.Code.fromAsset('backend/lambda-fns'),
       memorySize: 1024
     })
     
