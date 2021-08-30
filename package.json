@@ -19,7 +19,8 @@
   "homepage": "https://github.com/lzrscg/nextjs-cdk-amplify-starter#readme",
   "workspaces": [
     "web",
-    "backend"
+    "backend",
+    "lambda"
   ],
   "dependencies": {
     "@aws-cdk/core": "^1.120.0",

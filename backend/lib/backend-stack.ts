@@ -56,7 +56,7 @@ export class BackendStack extends cdk.Stack {
       runtime: lambda.Runtime.NODEJS_12_X,
       handler: 'main.handler',
       // TODO: figure out how to import from relative path
-      code: lambda.Code.fromAsset('backend/lambda-fns'),
+      code: lambda.Code.fromAsset('lambda'),
       memorySize: 1024
     })
     
