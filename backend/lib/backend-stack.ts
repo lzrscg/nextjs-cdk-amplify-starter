@@ -3,7 +3,6 @@ import * as cognito from '@aws-cdk/aws-cognito'
 import * as appsync from '@aws-cdk/aws-appsync'
 import * as ddb from '@aws-cdk/aws-dynamodb'
 import * as lambda from '@aws-cdk/aws-lambda'
-import path = require('path/posix')
 
 export class BackendStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
